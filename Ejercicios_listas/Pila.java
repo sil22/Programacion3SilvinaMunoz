@@ -68,15 +68,5 @@ public class Pila {
 		System.out.println("Imprimo pila");
 		System.out.println(p.printStack());
 		
-		for (int i = 0; i < p.size(); i++) {
-			p.pop();
-			
-		}
-		System.out.println(p.printStack());
-		
-
-
 	}
-	
-
 }
