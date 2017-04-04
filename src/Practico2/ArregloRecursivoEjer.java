@@ -193,9 +193,7 @@ public class ArregloRecursivoEjer {
 		
 	}
 	
-	public void mergeSort() {
-		
-	}
+
 	
 
 	public static void main(String[] args) {

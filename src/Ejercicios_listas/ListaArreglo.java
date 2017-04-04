@@ -101,7 +101,7 @@ public class ListaArreglo {
 		// determinar cant
 		
 		inicio = System.currentTimeMillis();
-		System.out.println("tama�o de la lista: " + la.getTamanio());
+		System.out.println("tamanio de la lista: " + la.getTamanio());
 		fin = System.currentTimeMillis();
 		
 		tiempoTotal = fin - inicio;
