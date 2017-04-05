@@ -22,6 +22,7 @@ public class ArregloRecursivoEjer {
 		for (int i = 0; i < cant; i++) {
 			System.out.print(arr[i] + " ");
 		}
+		System.out.println("");
 	}
 
 	public void insertarAlcomienzo(Integer o) {
@@ -146,7 +147,6 @@ public class ArregloRecursivoEjer {
 		int aux = 0;
 		for (int i = 0; i < cant-1; i++) {
 			for (int j = 0; j < cant-i-1; j++) {
-			//	System.out.println(cant-i-1);
 				if(arr[j+1] < arr[j]) {
 					aux = arr[j+1];
 					arr[j+1] = arr[j];
@@ -233,40 +233,83 @@ public class ArregloRecursivoEjer {
 			i++;
 		}	
 	}
+	
+	public void cargarArregloAleatorio(int max) {
+		for (int i = 0; i < max; i++) {
+			this.insertarAlcomienzo((int) (Math.random()*10));
+		}
+	}
 
 	public static void main(String[] args) {
 		ArregloRecursivoEjer arr = new ArregloRecursivoEjer();
 		long inicio, fin, tiempoTotal;
-
+		
+		/* 
+		 * dejo comentado uno de los codigos para poder ejecutarlos en diferentes momentos y poder probar distintos tamaños del arreglo
+		 */
+//		BURBUJEO
 		inicio = System.currentTimeMillis();
-
-		arr.insertarAlcomienzo(1);
-		arr.insertarAlcomienzo(3);
-		arr.insertarAlcomienzo(8);
-		arr.insertarAlcomienzo(2);
-		arr.insertarAlcomienzo(6);
-		arr.insertarAlcomienzo(4);
-		arr.imprimir();
+		arr.cargarArregloAleatorio(1000);
+		arr.ordenarPorBurbujeo();
+		System.out.println("Arreglo ordenado por Burbujeo");
 		fin = System.currentTimeMillis();
-
 		tiempoTotal = fin - inicio;
 		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");
-
-//		 System.out.println(arr.estaOrdenado());
-//		 System.out.println(arr.getElementRecursivo(2));
-//
-//		 System.out.println("el minimo es: " + arr.getMin());
-//		 arr.eliminarPrimerInstancia(3);
-//		 System.out.println("eliminada la instancia 3");
-//		 arr.imprimir();
-//		 arr.ordenarPorSeleccion();
-//		 arr.imprimir();
-//		arr.llamadaQuickSort();
-//		arr.imprimir();
-//		 arr.ordenarPorBurbujeo();
-//		 arr.imprimir();
-		arr.mergeSort();
+		
+		
+		/*
+//		QUICKSORT
+		inicio = System.currentTimeMillis();
+		arr.cargarArregloAleatorio(15000);
 		arr.imprimir();
-
+		arr.llamadaQuickSort();
+		System.out.println("Arreglo ordenado por QuickSort");
+		arr.imprimir();
+		fin = System.currentTimeMillis();
+		tiempoTotal = fin - inicio;
+		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");
+		*/
+		
+		/*
+		 
+		ANALISIS
+		
+		En la primeras ejecuciones el tiempo fue mayor que las ejecuciones siguientes. Variando el tamanio del arreglo (desde 50 a 100000) al principio
+		no es tanta la diferencia de los milisegundosen cada ejecucion pero a partir de 1000 fueron mas distanciadas.		
+		
+		*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+/*		
+		 System.out.println(arr.estaOrdenado());
+		 System.out.println(arr.getElementRecursivo(2));
+		 System.out.println("el minimo es: " + arr.getMin());
+		 arr.eliminarPrimerInstancia(3);
+		 System.out.println("eliminada la instancia 3");
+		 arr.imprimir();
+		 arr.ordenarPorSeleccion();
+		 arr.imprimir();
+		 arr.llamadaQuickSort();
+		 arr.imprimir();
+		 arr.ordenarPorBurbujeo();
+		 arr.imprimir();
+		 arr.mergeSort();
+		 arr.imprimir();
+*/
 	}
 }
