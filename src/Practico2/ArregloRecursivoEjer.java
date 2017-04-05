@@ -146,7 +146,7 @@ public class ArregloRecursivoEjer {
 		int aux = 0;
 		for (int i = 0; i < cant-1; i++) {
 			for (int j = 0; j < cant-i-1; j++) {
-				System.out.println(cant-i-1);
+			//	System.out.println(cant-i-1);
 				if(arr[j+1] < arr[j]) {
 					aux = arr[j+1];
 					arr[j+1] = arr[j];
@@ -193,8 +193,46 @@ public class ArregloRecursivoEjer {
 		
 	}
 	
+	public void mergeSort() {
+		mergeSort(0, cant-1);
+	}
 
+	private void mergeSort( int inicio, int fin) {
+		if(inicio < fin) {
+			int medio = (inicio + fin) / 2;
+			mergeSort(inicio, medio);
+			mergeSort(medio + 1, fin);
+			int [] arrAux = new int [cant];
+			mergeAmbos(inicio,medio,fin,arrAux);
+		}
 	
+	}
+
+	private void mergeAmbos(int inicio, int medio, int fin, int [] arrAux) {
+		for (int i = inicio; i <= fin; i++) {
+			arrAux[i] = arr[i];
+		}
+		
+		int i = inicio;
+		int j = medio + 1;
+		int k = inicio;
+		
+		while(i <= medio && j <= fin) {
+			if(arrAux[i] <= arrAux[j]) {
+				arr[k] = arrAux[i];
+				i++;
+			} else {
+				arr[k] = arrAux[j];
+				j++;
+			}
+			k++;
+		}
+		while(i <= medio ) {
+			arr[k] = arrAux[i];
+			k++;
+			i++;
+		}	
+	}
 
 	public static void main(String[] args) {
 		ArregloRecursivoEjer arr = new ArregloRecursivoEjer();
@@ -225,8 +263,10 @@ public class ArregloRecursivoEjer {
 //		 arr.imprimir();
 //		arr.llamadaQuickSort();
 //		arr.imprimir();
-		 arr.ordenarPorBurbujeo();
-		 arr.imprimir();
+//		 arr.ordenarPorBurbujeo();
+//		 arr.imprimir();
+		arr.mergeSort();
+		arr.imprimir();
 
 	}
 }
