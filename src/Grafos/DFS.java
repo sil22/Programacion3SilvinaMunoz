@@ -17,12 +17,9 @@ public class DFS {
 	}
 
 	public boolean dfs(Vertice v) {
-		int visitados[] = new int[cantVertices];
-		for (int i = 0; i < visitados.length; i++) {
-			visitados [i] = -1;
-		}
+		
 		for (int i = 0; i < v.vertices.size(); i++) {
-			if(visitados[i] == -1) {
+			if(!visitados.containsKey(v)) {
 				return recursiveSearch(v.vertices.get(i));
 			}
 		}
@@ -104,13 +101,12 @@ public class DFS {
 		v1.addVertice(v4);
 		v2.addVertice(v4);
 		v4.addVertice(v3);
-		v4.addVertice(v1);
+	//	v4.addVertice(v1);
 
 		DFS dfs = new DFS(5);
 			
 		System.out.println(dfs.dfs(v1));	
-//		System.out.println("Hay ciclos?" + dfs.recursiveSearch(v1));
-//		System.out.println("Hay ciclos? iterativo " + dfs.iterativeSearch(v1));
+		System.out.println("Hay ciclos? iterativo " + dfs.iterativeSearch(v1));
 
 	}
 }

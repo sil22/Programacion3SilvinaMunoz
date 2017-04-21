@@ -21,9 +21,7 @@ public class Vertice {
 	
 	public ArrayList<Vertice> getAdyacentes(Vertice i) {
 		ady.addAll(i.getVertices());
-//		for (int j = 1; j < i.vertices.size(); j++) {
-//			ady.addAll(i.vertices.get(j).getVertices());
-//		}
+
 		return ady;
 	}
 
