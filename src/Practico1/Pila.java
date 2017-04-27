@@ -1,4 +1,4 @@
-package Ejercicios_listas;
+package Practico1;
 
 public class Pila {
 	
@@ -33,7 +33,7 @@ public class Pila {
 		return null;
 	}
 	
-	//Elimina el objeto en la parte superior de la pila y devuelve ese objeto como el valor de esta función.
+	//Elimina el objeto en la parte superior de la pila y devuelve ese objeto como el valor de esta funciï¿½n.
 	public Integer pop() {
 			int p = this.top();
 			pila.eliminarUltimoElemento();
@@ -42,7 +42,7 @@ public class Pila {
 	
 	public String printStack() {
 		String s = "";
-		s += pila.imprimir();
+		s += pila.toString();
 	
 		return s;
 	}

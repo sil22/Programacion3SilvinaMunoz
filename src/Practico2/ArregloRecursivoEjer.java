@@ -1,5 +1,7 @@
 package Practico2;
 
+import java.util.ArrayList;
+
 public class ArregloRecursivoEjer {
 
 	Integer arr[];
@@ -244,18 +246,33 @@ public class ArregloRecursivoEjer {
 		ArregloRecursivoEjer arr = new ArregloRecursivoEjer();
 		long inicio, fin, tiempoTotal;
 		
+		
+		
+		
+		
+		
 		/* 
 		 * dejo comentado uno de los codigos para poder ejecutarlos en diferentes momentos y poder probar distintos tamaños del arreglo
 		 */
 //		BURBUJEO
-		inicio = System.currentTimeMillis();
-		arr.cargarArregloAleatorio(1000);
-		arr.ordenarPorBurbujeo();
-		System.out.println("Arreglo ordenado por Burbujeo");
-		fin = System.currentTimeMillis();
-		tiempoTotal = fin - inicio;
-		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");
+//		inicio = System.currentTimeMillis();
+//		arr.cargarArregloAleatorio(1000);
+//		arr.ordenarPorBurbujeo();
+//		System.out.println("Arreglo ordenado por Burbujeo");
+//		fin = System.currentTimeMillis();
+//		tiempoTotal = fin - inicio;
+//		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");
 		
+//		SELECCION 
+//		inicio = System.currentTimeMillis();
+//		arr.cargarArregloAleatorio(15000);
+//		arr.imprimir();
+//		arr.llamadaQuickSort();
+//		System.out.println("Arreglo ordenado por Seleccion");
+//		arr.imprimir();
+//		fin = System.currentTimeMillis();
+//		tiempoTotal = fin - inicio;
+//		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");
 		
 		/*
 //		QUICKSORT
@@ -279,19 +296,14 @@ public class ArregloRecursivoEjer {
 		
 		*/
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+//		MERGESORT
+//		inicio = System.currentTimeMillis();
+//		arr.cargarArregloAleatorio(1000);
+//		arr.ordenarPorBurbujeo();
+//		System.out.println("Arreglo ordenado por MergeSort");
+//		fin = System.currentTimeMillis();
+//		tiempoTotal = fin - inicio;
+//		System.out.println("La tarea llevo " + tiempoTotal + " milisegundos");	
 		
 		
 		

@@ -1,4 +1,4 @@
-package Ejercicios_listas;
+package Practico1;
 
 public class ListaNodo {
 	
@@ -11,6 +11,14 @@ public class ListaNodo {
 	
 	public int size() {
 		return cantidad;
+	}
+	
+	public Nodo getPrimero() {
+		return primero;
+	}
+	
+	public Integer getValorNodo() {
+		return primero.getValor();
 	}
 	
 	public boolean isEmpty() {
@@ -117,7 +125,7 @@ public class ListaNodo {
 		return null;
 	}
 	
-	public String imprimir()  {
+	public String toString()  {
 		String result = "";
 		Nodo aux = primero;
 		
@@ -139,11 +147,11 @@ public class ListaNodo {
 
 		System.out.println(l1.size());
 		System.out.println(l1.isEmpty());
-		System.out.println(l1.imprimir());
+		System.out.println(l1.toString());
 		//l1.eliminarElemento(2);
 		System.out.println("Elimino el ult elem");
 		l1.eliminarUltimoElemento();
-		System.out.println(l1.imprimir());
+		System.out.println(l1.toString());
 		
 		time_end = System.currentTimeMillis();
 		System.out.println("La tarea llevo "+ ( time_end - time_start ) +" milisegundos");

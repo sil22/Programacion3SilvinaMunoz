@@ -1,4 +1,4 @@
-package Ejercicios_listas;
+package Practico1;
 
 public class ListaArreglo {
 	Object arr [];
