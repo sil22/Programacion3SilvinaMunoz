@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class Mochila {
 
 	private int capacidad;
-	public int contPeso;
+	private int contPeso;
 	
 	
 
@@ -43,12 +43,12 @@ public class Mochila {
 		while (!s.isEmpty() && !solucion()) {
 			Item x = seleccionarMejorItem(s); 
 			s.remove(x);
-		int cantPorItem = getCantidad(x);
-			if(cantPorItem != 0) {
-				items2.put(x.getNombre(), cantPorItem);
-				contPeso += cantPorItem * x.getPeso();
-			}
-			
+			int cantPorItem = getCantidad(x);
+				if(cantPorItem != 0) {
+					items2.put(x.getNombre(), cantPorItem);
+					contPeso += cantPorItem * x.getPeso();
+				}
+				
 		}
 		return items2;
 

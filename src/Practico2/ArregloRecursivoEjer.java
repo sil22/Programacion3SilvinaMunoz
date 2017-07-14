@@ -8,7 +8,7 @@ public class ArregloRecursivoEjer {
 	int cant;
 
 	public ArregloRecursivoEjer() {
-		arr = new Integer[10];
+		arr = new Integer[5];
 		cant = 0;
 	}
 
@@ -128,10 +128,15 @@ public class ArregloRecursivoEjer {
 		int pos = 0;
 		int aux = 0;
 		Integer min;
+		
+		
+		
 		for (int i = 0; i < cant; i++) {
 			min = arr[i];
 			pos = i;
-
+			for (int h = 0; h < arr.length; h++) {
+				System.out.println(arr[h]);
+			}
 			for (int j = i + 1; j < cant; j++) {
 				if (arr[j] < min) {
 					min = arr[j];
@@ -247,7 +252,12 @@ public class ArregloRecursivoEjer {
 		long inicio, fin, tiempoTotal;
 		
 		
-		
+		arr.cargarArregloAleatorio(5);
+		System.out.println(arr.estaOrdenado());
+		arr.imprimir();
+		arr.ordenarPorSeleccion();
+		arr.imprimir();
+		System.out.println(arr.estaOrdenado());
 		
 		
 		
@@ -299,7 +309,7 @@ public class ArregloRecursivoEjer {
 //		MERGESORT
 //		inicio = System.currentTimeMillis();
 //		arr.cargarArregloAleatorio(1000);
-//		arr.ordenarPorBurbujeo();
+		arr.mergeSort();
 //		System.out.println("Arreglo ordenado por MergeSort");
 //		fin = System.currentTimeMillis();
 //		tiempoTotal = fin - inicio;

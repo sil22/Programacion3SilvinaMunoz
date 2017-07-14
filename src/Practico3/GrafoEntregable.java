@@ -44,7 +44,7 @@ public class GrafoEntregable {
 	public static void main(String[] args) {
 		GrafoEntregable g = new GrafoEntregable(10);
 
-		for (int i = 0; i < g.getNumVertices() ; i++) {
+		for (int i = 0; i < g.getNumVertices(); i++) {
 			g.addVertice(i);
 		}
 		
@@ -54,15 +54,20 @@ public class GrafoEntregable {
 
 		}
 		
-		System.out.println(g.toString());
+		System.out.println(g.toString());		
+//		//Para probar con un grafo que haga ciclo
+//		g.addArco(1, 0);
+//		System.out.println(g.toString());
+//		DFS dfs= new DFS();
+//		System.out.println(dfs.dfsRecursivo(g));
+//		System.out.println(dfs.dfsIterativo(g));
 		
-		//Para probar con un grafo que haga ciclo
-		//g.addArco(1, 0);
-		
-		DFS dfs= new DFS();
-		System.out.println(dfs.dfsRecursivo(g));
-	//	System.out.println(dfs.dfsIterativo(g));
-	
+		BFS bfs = new BFS();
+		ArrayList<Integer> enAnchura = bfs.bfs(g);
+		for (int i = 0; i < enAnchura.size(); i++) {
+			System.out.println(enAnchura.get(i));
+			
+		}
 	}
 	
 	
